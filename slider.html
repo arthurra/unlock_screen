@@ -1,0 +1,230 @@
+<!HTML>
+	<head>
+
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link href='http://fonts.googleapis.com/css?family=Marvel:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
+
+		<script>
+			function clock() {
+			  var now = new Date();
+
+			  // HOUR
+			  var hourStr = now.getHours();
+			  if (hourStr >12){newHour = hourStr-12;hourStr = newHour;}
+
+			  // MINUTES
+			  var minStr = now.getMinutes();
+			  if (minStr <10){newMin = "0"+minStr; minStr = newMin;}
+
+			  // DAY OF THE WEEK
+			  var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+			  var dayStr = dayNames[now.getDay()];
+
+			  // DAY OF THE MONTH
+			  var monthNames = new Array("January","February","March","April","May","June","July","August","September","Octoaber","November","December");
+			  var monthStr = monthNames[now.getMonth()];
+			  var dateStr = now.getDate();
+			  
+			  document.getElementById('timeHours').innerHTML=hourStr;
+			  document.getElementById('timeMinutes').innerHTML=minStr;
+			  document.getElementById('weekday').innerHTML=dayStr;
+			  document.getElementById('date').innerHTML=monthStr+" "+dateStr;
+			  setTimeout('clock()',1000);
+			}
+			clock();
+		</script>
+
+		<style>
+			@font-face {
+			  font-family: 'FontAwesome';
+			  src: url('font/fontawesome-webfont.eot');
+			  src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+			     url('font/fontawesome-webfont.woff') format('woff'),
+			     url('font/fontawesome-webfont.ttf') format('truetype'),
+			     url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			}
+
+			body{
+				/*max-width: 640px;*/
+				text-align: center;
+				margin: 5%;
+			}
+			.container{
+				box-shadow: 0 0 15px rgba(0,0,0,.15) inset, 0 0 30px rgba(0,0,0,.15);
+				border-radius: 20px;
+				margin-top: -85px;
+				padding: 5%;
+				margin-bottom: 75px;
+			}
+			h1{
+				font-family: Kite One;
+				font-weight: bold;
+				font-size: 175px;
+				display: inline-block;
+				margin: 40px auto 25px;
+				color: #3bb7f7;
+				letter-spacing: -5px;
+				text-shadow: 0 2px 2px rgba(0,0,0,.15);
+			}
+			h1 span{
+				position: relative;
+				top: -25px;
+				margin: 0 10px;
+			}
+			h2{
+				font-family: Kite One;
+				font-weight: 400;
+				font-size: 30px;
+				text-transform: uppercase;
+				display: inline-block;
+				margin: 0 40px;
+				color: #3bb7f7;
+				position: relative;
+				top: -25px;
+			}
+			.event, .message, .call{
+				position: relative;
+				top: -75px;
+			}
+			.event{
+				z-index: 100;
+			}
+			.message{
+				z-index: 70;
+			}
+			.call{
+				z-index: 20;
+			}
+			.slot{
+				height: 20px;
+				background: #f2f2f2;
+				border-radius: 15px;
+				box-shadow: 0 4px 8px rgba(0,0,0,.25) inset;
+				margin-top:150px;
+			}
+			.card{
+				display: block;
+				position: absolute;
+				background-color: #3bb7f7;
+				text-align: left;
+				width: 94%;
+				height: 80px;
+				margin: -20px 3% 0;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				padding: 25px;
+				box-shadow: 0 5px 8px rgba(0,0,0,.2) inset, 0 3px 10px rgba(0,0,0,.25); 
+				-webkit-transition: all .25s ease-in-out;
+			}
+			.card:hover{
+				height: 255px;
+				box-shadow: 0 5px 8px rgba(0,0,0,.2) inset, 0 7px 15px rgba(0,0,0,.5); 
+			}
+			.card::after, #slider::after{
+				content: "";
+				background-image: url(images/bg.png);
+				background-size: 50px;
+				opacity: 0.15;
+		    top: 0;
+		    left: 0;
+		    bottom: 0;
+		    right: 0;
+		    position: absolute;
+		    z-index: 0;
+			}
+			i{
+				display: inline-block;
+				position: relative;
+				font-size: 45px;
+				color: #fff;
+				text-shadow: 0 2px 2px rgba(0,0,0,.25);
+				-webkit-transition: all .25s ease-in-out;
+				z-index: 1;
+			}
+			p{
+				font-family: Kite One;
+				display: inline-block;
+				color: #fff;
+				text-transform: uppercase;
+				text-shadow: 0 2px 2px rgba(0,0,0,.25);
+				margin: 0 30px;
+				position: relative;
+				letter-spacing: 1px;
+				z-index: 1;
+				-webkit-transition: all .25s ease-in-out;
+			}
+			p span{
+				font-size: 35px;
+				margin-right: 10px;
+			}
+			.card:hover > *{
+				top: 175px;
+			}
+			#well{
+				padding: 0 20px;
+				margin-top: 150px;
+			}
+			#well .slot{
+				margin: 0 -20px;
+			}
+			#slider{
+				height: 100px;
+				width: 125px;
+				border-radius: 0 0 70px 70px;
+				background: #3bb7f7;
+				text-align: center;
+				margin-top: -20px;
+				box-sizing: border-box;
+				padding: 25px 0;
+				box-shadow: 0 5px 8px rgba(0,0,0,.2) inset, 0 5px 10px rgba(0,0,0,.25);
+			}
+
+		</style>
+	</head>
+	<body onload="clock();">
+		<div class="container">
+			<!-- <h1>12<span>:</span>20</h1>	 -->
+			<h1 id="timeHours">4</h1><h1><span>:</span><h1 id="timeMinutes">20</h1></br>
+			<h2 id="weekday">monday</h2>
+			<h2 id="date">may 14</h2>
+			<div class="event">
+				<div class="slot">
+				</div>
+				<div class="card">
+					<i class="icon-time"></i>
+					<p><span>1</span>event</p>
+				</div>
+			</div>
+			<div class="message">
+				<div class="slot">
+				</div>
+				<div class="card">
+					<i class="icon-envelope"></i>
+					<p><span>2</span>new messages</p>
+				</div>
+			</div>
+			<div class="call">
+				<div class="slot">
+				</div>
+				<div class="card">
+					<i class="icon-phone"></i>
+					<p><span>0</span>missed calls</p>
+				</div>
+			</div>
+		</div>
+		<div id="well">
+			<div class="slot">
+			</div>
+			<div id="slider" class="ui-draggable">
+				<i class="icon-lock"></i>
+			</div>
+		</div>
+	</body>
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+	<script src='js/slidetounlock.js'></script>
+</html>

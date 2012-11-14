@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'FontAwesome';
-  src: url('font/fontawesome-webfont.eot');
-  src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
-     url('font/fontawesome-webfont.woff') format('woff'),
-     url('font/fontawesome-webfont.ttf') format('truetype'),
-     url('font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  src: url('../font/fontawesome-webfont.eot');
+  src: url('../font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../font/fontawesome-webfont.woff') format('woff'),
+     url('../font/fontawesome-webfont.ttf') format('truetype'),
+     url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -87,7 +87,7 @@ h2{
 }
 .card::after, #slider::after{
 	content: "";
-	background-image: url(images/bg.png);
+	background-image: url(../images/bg.png);
 	background-size: 50px;
 	opacity: 0.15;
   top: 0;

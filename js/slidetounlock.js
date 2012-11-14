@@ -8,7 +8,7 @@ $(function() {
 		drag: function(event, ui) {
 			console.log(ui.position.left);
 			if (ui.position.left > d) {
-				$("body").fadeOut();
+				$("#unlock").fadeOut();
 			}
 		},
 		stop: function(event, ui) {

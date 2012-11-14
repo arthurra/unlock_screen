@@ -1,4 +1,6 @@
 $(function() {
+	var w = $(#well).width;
+
 	$("#slider").draggable({
 		axis: 'x',
 		containment: 'parent',

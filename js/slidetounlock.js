@@ -6,8 +6,6 @@ $(function() {
 		axis: 'x',
 		containment: 'parent',
 		drag: function(event, ui) {
-			console.log(ui.position.left);
-			console.log(u);
 			if (ui.position.left > u) {
 				$("body").fadeOut();
 			}
@@ -16,7 +14,7 @@ $(function() {
 			if (ui.position.left < u + 1) {
 				$(this).animate({
 					left: 8
-				})
+				});
 			}
 		}
 	});
@@ -25,8 +23,6 @@ $(function() {
 		axis: 'x',
 		containment: 'parent',
 		drag: function(event, ui) {
-			console.log(ui.position.left);
-			console.log(u);
 			if (ui.position.left > u) {
 				$("body").fadeOut();
 			}
@@ -35,7 +31,7 @@ $(function() {
 			if (ui.position.left < u + 1) {
 				$(this).animate({
 					left: 0
-				})
+				});
 			}
 		}
 	});

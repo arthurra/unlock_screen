@@ -52,10 +52,10 @@ hr
   display: none
 
 h4
-  font-family: helvetica
+  font-family: Kite One
   font-weight: bold
   color: #999
-  font-size: 35px
+  font-size: 32px
   margin-top: 0.5em
   margin-bottom: 0
 
@@ -65,7 +65,7 @@ p
   font-size: 28px
   color: #666
   margin: 0.5em 0
-  height: 3.5em
+  height: 2.5em
   overflow: hidden
   white-space:pre-wrap
   text-overflow: ellipsis
@@ -129,19 +129,26 @@ i
   opacity: 0
   -webkit-transition: all 0.5s 0.5s
   -moz-transition: all 0.5s 0.5s
+  //&:active
+    &::before 
+      left: 100%
 
-panel::before 
+//panel::before 
   content: ""
   display: block
+  float: left
   width: 0
   height: 0
   border: solid 50px
   border-color: transparent transparent transparent #7803db
-  position: absolute
-  left: 0
+  position: relative
+  left: -1.5%
   top: 20%
+  z-index: 500
+  -webkit-transition: left 0.5s
+  -moz-transition: left 0.5s
 
-panel::after 
+//panel::after 
   content: ""
   display: block
   width: 0

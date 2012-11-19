@@ -1,0 +1,62 @@
+%html
+	%head
+		%link{:href => "css/font-awesome.css", :rel => "stylesheet"}
+		%link{:href => "http://fonts.googleapis.com/css?family=Marvel:400,700", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "http://fonts.googleapis.com/css?family=Kite+One", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "http://fonts.googleapis.com/css?family=Sanchez", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "css/style.css", :rel => "stylesheet"}
+		%style
+	%body
+		%div#nav
+			%i.icon-reorder
+			%div#messages
+				%h3 New Messages
+				%hr
+				%div.panel
+					%div.pic.danny
+					%h4 Danny Devito
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non mauris eros. Etiam fermentum pretium orci in porta. Suspendisse nullam.
+				%div.panel
+					%div.pic.ricky
+					%h4 Ricky Bobby
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non mauris eros. Etiam fermentum pretium orci in porta. Suspendisse nullam.
+				%div.panel
+					%div.pic
+						%i.icon-share-alt
+					%h4 (513)504-5819
+					%p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non mauris eros. Etiam fermentum pretium orci in porta. Suspendisse nullam.
+		%div#main
+			%h1#timeHours 4
+			%h1	
+				%span :
+			%h1#timeMinutes 20
+			%br
+			%h2#weekday monday
+			%h2#date march 10
+			%div#sliders
+				%div.unlock
+					%div.outer-track
+						%div.inner-track
+					%div.slider
+						%i.icon-camera
+				%div.unlock
+					%div.outer-track
+						%div.inner-track
+					%div.slider
+						%i.icon-envelope
+				%div.unlock
+					%div.outer-track
+						%div.inner-track
+					%div.slider
+						%i.icon-phone
+				%div.unlock
+					%div.outer-track
+						%div.inner-track
+					%div.slider
+						%i.icon-lock
+	%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js")
+	%script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js")
+	%script(src="js/jquery.ui.touch-punch.min.js")
+	%script(src="js/slidetounlock.js")
+	%script(src="js/clock.js")
+	%script(src="js/toggle.js")

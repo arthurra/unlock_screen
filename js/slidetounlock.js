@@ -1,18 +1,38 @@
 $(function() {
-	var w = $("#well").width();
-	var d = w * 0.75;
+	var w = $("#sliders").width();
+	var u = w * 0.75;
 
-	$("#slider").draggable({
+	$(".slider").draggable({
 		axis: 'x',
 		containment: 'parent',
 		drag: function(event, ui) {
 			console.log(ui.position.left);
-			if (ui.position.left > d) {
-				$("#unlock").fadeOut();
+			console.log(u);
+			if (ui.position.left > u) {
+				$("body").fadeOut();
 			}
 		},
 		stop: function(event, ui) {
-			if (ui.position.left < d + 1) {
+			if (ui.position.left < u + 1) {
+				$(this).animate({
+					left: 8
+				})
+			}
+		}
+	});
+
+	$(".pic").draggable({
+		axis: 'x',
+		containment: 'parent',
+		drag: function(event, ui) {
+			console.log(ui.position.left);
+			console.log(u);
+			if (ui.position.left > u) {
+				$("body").fadeOut();
+			}
+		},
+		stop: function(event, ui) {
+			if (ui.position.left < u + 1) {
 				$(this).animate({
 					left: 0
 				})

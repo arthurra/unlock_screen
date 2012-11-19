@@ -6,7 +6,6 @@ $(function() {
 		axis: 'x',
 		containment: 'parent',
 		drag: function(event, ui) {
-			console.log(ui.position.left);
 			if (ui.position.left > d) {
 				$("#unlock").fadeOut();
 			}
@@ -15,7 +14,7 @@ $(function() {
 			if (ui.position.left < d + 1) {
 				$(this).animate({
 					left: 0
-				})
+				});
 			}
 		}
 	});

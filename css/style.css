@@ -5,6 +5,20 @@
   font-weight: normal;
   font-style: normal; }
 
+@-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -720px center; }
+
+  100% {
+    background-position: 720px center; } }
+
+@-moz-keyframes slidetounlock {
+  0% {
+    background-position: -720px center; }
+
+  100% {
+    background-position: 720px center; } }
+
 body {
   text-align: center;
   user-select: none;
@@ -69,9 +83,12 @@ p {
   text-overflow: ellipsis; }
 
 i {
-  font-size: 4em;
+  font-size: 3.5em;
   color: white;
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.5); }
+
+.icon-reorder {
+  font-size: 5em; }
 
 #nav {
   display: block;
@@ -124,9 +141,12 @@ i {
   -moz-box-sizing: border-box;
   margin-top: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
-  opacity: 0;
-  -webkit-transition: all 0.5s 0.5s;
-  -moz-transition: all 0.5s 0.5s; }
+  opacity: 0; }
+  .panel:active {
+    background-image: url("../images/bg_slide.png");
+    background-size: 100%;
+    -webkit-animation: slidetounlock 5s infinite linear;
+    -moz-animation: slidetounlock 5s infinite linear; }
 
 .pic {
   height: 150px;
@@ -213,12 +233,15 @@ i {
   display: block;
   width: 0%;
   height: 100%;
-  background: #7803db;
-  opacity: 0.25;
+  background: rgba(115, 0, 212, 0.25);
   border-radius: 10px;
-  box-shadow: 0 5px 10px black inset;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) inset;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s; }
+  -moz-transition: all 0.5s;
+  background-image: url("../images/bg_slide.png");
+  background-size: 50%;
+  -webkit-animation: slidetounlock 5s infinite linear;
+  -moz-animation: slidetounlock 5s infinite linear; }
 
 .slider {
   display: block;

@@ -60,6 +60,9 @@ h3 {
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 0;
   display: none; }
+  h3 i {
+    font-size: 50px;
+    margin-right: 15px; }
 
 hr {
   display: none; }
@@ -211,6 +214,7 @@ i {
   position: relative;
   top: -12px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   border-radius: 90px;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0) inset;
   box-sizing: border-box;
@@ -280,8 +284,8 @@ i {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) inset;
   background-image: url("../images/bg_slide.png");
   background-size: 50%;
-  -webkit-animation: slidetounlock 5s infinite linear;
-  -moz-animation: slidetounlock 5s infinite linear; }
+  -webkit-animation: slidetounlock 8s infinite linear;
+  -moz-animation: slidetounlock 8s infinite linear; }
 
 .slider {
   display: block;

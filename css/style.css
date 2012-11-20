@@ -121,6 +121,31 @@ i {
 .icon-reorder {
   font-size: 5em; }
 
+.clear {
+  font-family: Kite One;
+  font-size: 35px;
+  white-space: no-wrap;
+  display: block;
+  width: 25%;
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: #7803db;
+  background: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+  top: -5px;
+  margin-bottom: 100px;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s;
+  -moz-transition: opacity 0.15s; }
+  .clear i {
+    color: #7803db;
+    font-size: 50px;
+    margin-right: 15px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); }
+
 #nav {
   display: block;
   width: 10%;
@@ -147,6 +172,8 @@ i {
       left: 75%; }
     #nav.open .icon-reorder {
       float: right; }
+    #nav.open .clear {
+      opacity: 1; }
 
 #messages {
   display: block;

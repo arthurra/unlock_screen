@@ -236,8 +236,6 @@ i {
   background: rgba(115, 0, 212, 0.25);
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25) inset;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   background-image: url("../images/bg_slide.png");
   background-size: 50%;
   -webkit-animation: slidetounlock 5s infinite linear;

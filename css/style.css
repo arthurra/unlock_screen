@@ -154,7 +154,7 @@ i {
 
 #nav {
   display: block;
-  width: 10%;
+  width: 15%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -206,14 +206,18 @@ i {
   margin-top: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
   opacity: 0; }
-  .panel .inner-track {
-    width: 0%;
-    height: 45px;
-    position: relative;
-    top: -80px;
-    left: 70px;
-    border-radius: 25px;
-    -webkit-transition: all 0.25s; }
+  .panel .reply-track {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+    .panel .reply-track .inner-track {
+      width: 0%;
+      height: 45px;
+      margin: 0 10%;
+      position: relative;
+      top: -80px;
+      left: 0px;
+      border-radius: 25px;
+      -webkit-transition: all 0.25s; }
   .panel:active .reply-track {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25) inset; }
     .panel:active .reply-track h4, .panel:active .reply-track p {
@@ -221,7 +225,7 @@ i {
     .panel:active .reply-track h5 {
       opacity: 1; }
     .panel:active .reply-track .inner-track {
-      width: 85%;
+      width: 80%;
       height: 45px; }
 
 .pic {
@@ -270,7 +274,7 @@ i {
 #main {
   display: block;
   position: relative;
-  width: 90%;
+  width: 85%;
   height: 100%;
   float: right;
   margin: 0;

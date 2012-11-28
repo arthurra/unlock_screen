@@ -127,7 +127,7 @@ i {
   white-space: no-wrap;
   display: block;
   width: 25%;
-  padding: 15px;
+  padding: 20px 20px 15px;
   border: 1px solid white;
   border-radius: 10px;
   color: #7803db;
@@ -140,6 +140,12 @@ i {
   opacity: 0;
   -webkit-transition: opacity 0.15s;
   -moz-transition: opacity 0.15s; }
+  .clear:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    color: white; }
+    .clear:active i {
+      color: white; }
   .clear i {
     color: #7803db;
     font-size: 50px;
@@ -200,12 +206,23 @@ i {
   margin-top: 20px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
   opacity: 0; }
+  .panel .inner-track {
+    width: 0%;
+    height: 45px;
+    position: relative;
+    top: -80px;
+    left: 70px;
+    border-radius: 25px;
+    -webkit-transition: all 0.25s; }
   .panel:active .reply-track {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.25) inset; }
     .panel:active .reply-track h4, .panel:active .reply-track p {
       opacity: 0; }
     .panel:active .reply-track h5 {
       opacity: 1; }
+    .panel:active .reply-track .inner-track {
+      width: 85%;
+      height: 45px; }
 
 .pic {
   height: 150px;

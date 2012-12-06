@@ -68,10 +68,10 @@ hr {
   display: none; }
 
 h4 {
-  font-family: Kite One;
-  font-weight: bold;
+  font-family: Sanchez;
+  font-weight: normal;
   color: #999999;
-  font-size: 32px;
+  font-size: 36px;
   margin-top: 0.5em;
   margin-bottom: 0;
   -webkit-transition: all 0.25s;
@@ -170,7 +170,7 @@ i {
   -moz-transition: all 0.5s; }
   #nav.open {
     width: 85%; }
-    #nav.open #messages, #nav.open .panel, #nav.open h3, #nav.open hr {
+    #nav.open #messages, #nav.open #calls, #nav.open .panel, #nav.open h3, #nav.open hr {
       display: block;
       opacity: 1;
       left: 0; }
@@ -181,7 +181,7 @@ i {
     #nav.open .clear {
       opacity: 1; }
 
-#messages {
+#messages, #calls {
   display: block;
   position: relative;
   top: 0px;

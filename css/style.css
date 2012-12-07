@@ -176,8 +176,11 @@ i {
       left: 0; }
     #nav.open + #main {
       left: 75%; }
-    #nav.open .icon-reorder {
-      float: right; }
+    #nav.open .menu {
+      display: block;
+      float: right;
+      height: 80px;
+      width: 80px; }
     #nav.open .clear {
       opacity: 1; }
 

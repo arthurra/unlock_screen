@@ -1,4 +1,6 @@
-$("#nav").click(function () {
-  $(this).toggleClass("open");
-  $(".panel").toggleClass("show");
+$(document).ready( function(){
+	$("div.menu").click(function() {
+	  $("div#nav").toggleClass("open");
+	  $("div.panel").toggleClass("show");
+	});
 });

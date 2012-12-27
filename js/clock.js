@@ -1,9 +1,10 @@
-function clock() {
+$(function clock() {
   var now = new Date();
 
   // HOUR
   var hourStr = now.getHours();
   if (hourStr >12){newHour = hourStr-12;hourStr = newHour;}
+  if (hourStr == 0){newHour = 12;hourStr = newHour;}
 
   // MINUTES
   var minStr = now.getMinutes();
@@ -23,5 +24,4 @@ function clock() {
   document.getElementById('weekday').innerHTML=dayStr;
   document.getElementById('date').innerHTML=monthStr+" "+dateStr;
   setTimeout('clock()',1000);
-}
-clock();
+});
